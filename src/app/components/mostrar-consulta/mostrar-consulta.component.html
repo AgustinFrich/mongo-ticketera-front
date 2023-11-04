@@ -1,0 +1,13 @@
+<div class="row d-flex m-2">
+  <h1 class="w-75">Consulta seleccionada</h1>
+  <button class="w-25 btn btn-primary" style="float: right">
+    Ejecutar consulta
+  </button>
+</div>
+<div class="container" style="height: 200px">
+  <div *ngIf="consulta != null" class="h-100">
+    <textarea class="w-100" style="height: 200px; resize: none" disabled>{{
+      data
+    }}</textarea>
+  </div>
+</div>

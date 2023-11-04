@@ -1,0 +1,16 @@
+<h1>Listado de consultas</h1>
+
+<div style="overflow-y: scroll; scroll-behavior: smooth; max-height: 450px">
+  <div class="m-1" *ngFor="let c of consultas">
+    <div
+      class="card p-2"
+      [ngClass]="getCssClass(c.tipo)"
+      (click)="mostrarConsulta(c)"
+    >
+      <div class="card-text">
+        <span>{{ c.nombre }}</span>
+        <span style="float: right">{{ getEnumString(c.tipo) }}</span>
+      </div>
+    </div>
+  </div>
+</div>
