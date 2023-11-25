@@ -2,5 +2,9 @@
   <h1 class="w-75">Respuesta:</h1>
 </div>
 <div class="container" style="height: 200px">
-  <input type="text" class="w-100 h-100" disabled />
+  <pre>
+    <code *ngIf="consultaResultado != null">
+      {{consultaResultado}}
+    </code>
+  </pre>
 </div>

@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mostrar-respuesta',
   templateUrl: './mostrar-respuesta.component.html',
-  styleUrls: ['./mostrar-respuesta.component.css']
+  styleUrls: ['./mostrar-respuesta.component.css'],
 })
 export class MostrarRespuestaComponent implements OnInit {
+  @Input() consultaResultado: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

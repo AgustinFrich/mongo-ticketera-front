@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "mongo-ticketera"
+  },
+  "targets": {
+    "mongo-ticketera": {
+      "hosting": {
+        "mongo-ticketera": [
+          "mongo-ticketera"
+        ]
+      }
+    }
+  }
+}

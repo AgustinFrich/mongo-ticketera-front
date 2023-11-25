@@ -1,13 +1,25 @@
 <div class="row d-flex m-2">
-  <h1 class="w-75">Consulta seleccionada</h1>
-  <button class="w-25 btn btn-primary" style="float: right">
+  <h1 class="w-75">{{ titulo }}</h1>
+  <button
+    class="w-25 btn btn-primary"
+    style="float: right"
+    (click)="hacerConsulta()"
+  >
     Ejecutar consulta
   </button>
 </div>
 <div class="container" style="height: 200px">
   <div *ngIf="consulta != null" class="h-100">
-    <textarea class="w-100" style="height: 200px; resize: none" disabled>{{
-      data
-    }}</textarea>
+    <pre
+      class="w-100"
+      [innerHTML]="data | saltoDeLinea"
+      style="
+        height: 200px;
+        resize: none;
+        white-space: pre-line;
+        overflow-y: scroll;
+      "
+      disabled
+    ></pre>
   </div>
 </div>

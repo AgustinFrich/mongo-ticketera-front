@@ -6,7 +6,12 @@
     ></app-listado-consultas>
   </div>
   <div class="col-8 p-0">
-    <app-mostrar-consulta [consulta]="consultaMostrada"></app-mostrar-consulta>
-    <app-mostrar-respuesta></app-mostrar-respuesta>
+    <app-mostrar-consulta
+      [consulta]="consultaMostrada"
+      (ejecutarConsultaEvent)="obtenerResultadoConsulta($event)"
+    ></app-mostrar-consulta>
+    <app-mostrar-respuesta
+      [consultaResultado]="consultaResultado"
+    ></app-mostrar-respuesta>
   </div>
 </div>

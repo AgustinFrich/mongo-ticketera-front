@@ -8,8 +8,13 @@ import { Consulta } from './classes/consulta';
 })
 export class AppComponent {
   consultaMostrada: Consulta | null = null;
+  consultaResultado: any;
 
   mostrarConsulta($event: Consulta) {
     this.consultaMostrada = $event;
+  }
+
+  obtenerResultadoConsulta($event: string) {
+    this.consultaResultado = JSON.stringify($event, null, 2);
   }
 }
